@@ -76,11 +76,11 @@ function App() {
       "rating": 8.8
     }
   ]
-
+  let id = Math.random().toString()
   return (
       <div className='container'>
         
-         {movie.map(mov => <MoviePoster name = {mov.name} poster = {mov.poster} summary = {mov.summary} rating = {mov.rating}/>)}
+         {movie.map((mov) => <MoviePoster key={Math.random().toString()} name = {mov.name} poster = {mov.poster} summary = {mov.summary} rating = {mov.rating}/>)}
       </div>
     )
 }
